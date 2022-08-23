@@ -1,0 +1,28 @@
+<odoo>
+  <data>
+
+     <record model="ir.ui.view" id="hr_form_custom">
+      <field name="name">hr.form.custom</field>
+      <field name="model">hr.employee</field>
+      <field name="inherit_id" ref="hr.view_employee_form"/>
+      <field name="arch" type="xml">
+          <data>
+            <notebook>
+                <page string="Tarifa Consultor">
+                    <field name="hr_timesheets">
+                          <tree editable="bottom" create="1">
+                            <field name="analytic_account" />
+                            <field name="description" />
+                            <field name="from_date" />
+                            <field name="to_date" />
+                            <field name="value" />
+                          </tree>
+                    </field>
+                </page>
+            </notebook>
+          </data>
+      </field>
+     </record>
+
+  </data>
+</odoo>
